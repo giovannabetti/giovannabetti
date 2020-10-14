@@ -73,7 +73,7 @@
 }
 
 #page-map .map-popup .leaflet-popup-content {
-    background: #0089a5;
+    color: #0089a5;
     border-radius: 20px;
     font-weight: bold;
     margin: 8px 12px;

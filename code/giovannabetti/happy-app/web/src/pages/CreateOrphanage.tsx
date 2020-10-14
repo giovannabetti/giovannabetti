@@ -15,7 +15,7 @@ import '../styles/pages/create-orphanage.css';
 export default function OrphanagesMap() {
   const history = useHistory();
   
-  const [position, setPosition] = useState()
+  const [position, setPosition] = useState({ latitude:0, longitude:0 })
 
   const [name, setName] = useState('');
   const [about, setAbout] = useState('');
@@ -84,9 +84,9 @@ export default function OrphanagesMap() {
             <legend>Dados</legend>
 
             <Map 
-              center={[-27.2092052,-49.6401092]} 
+              center={[-19.9286131,-43.9567418]} 
               style={{ width: '100%', height: 280 }}
-              zoom={15}
+              zoom={13}
               onclick={handleMapClick}
             >
               <TileLayer 
