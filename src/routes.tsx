@@ -20,7 +20,7 @@ export default function Routes() {
                     name="OrphanagesMap"
                     component={OrphanagesMap}
                 />
-
+{/* Testando comentario com atualizacao para subir pro github */}
                 <Screen
                     name="OrphanagesDetails" component={OrphanagesDetails}
                     options={{
