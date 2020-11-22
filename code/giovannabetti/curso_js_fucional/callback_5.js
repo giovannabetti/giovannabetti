@@ -30,3 +30,27 @@ console.log(totais)
 const totalGeral = totais.reduce(somar, 1000) // ou somar, 0 - se quiser comecar do valor inicial 1000, por exemplo, mas pode ser qualquer um
 
 console.log(totalGeral)
+
+// Reduce Aula#03
+
+Array.prototype.meuReduce = function(fn, inicial) {
+  let acc = inicial
+
+  for(let i = 0; i < this.length; i++) {
+    if(!acc && i === 0) {
+      acc = this[i]
+      continue
+    }
+
+    acc = fn(acc, this[i], i, this)
+  }
+  return acc
+}
+
+const totalGeral2 = carrinho
+  .map(getTotal)
+  .meuReduce(somar)
+
+console.log(totalGeral2)
+
+  // tambem poderia utilizar essa logica no desafio 2, chamando meuReduce e o resultado da media seria o mesmo
