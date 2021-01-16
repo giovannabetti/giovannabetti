@@ -77,7 +77,11 @@ GEM
     zeitwerk (2.4.0)
 
 PLATFORMS
+  java
   ruby
+  x64-mingw32
+  x86-mingw32
+  x86-mswin32
 
 DEPENDENCIES
   rails-controller-testing
