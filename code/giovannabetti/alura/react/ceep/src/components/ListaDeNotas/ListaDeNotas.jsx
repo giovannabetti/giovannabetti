@@ -17,7 +17,7 @@ class ListaDeNotas extends Component {
   }
 
   _novasNotas(notas) {
-    this.setState({...this.props, notas})
+    this.setState({...this.state, notas})
   }
 
   render() {

@@ -11,7 +11,7 @@ export default class ArrayDeNotas {
   }
 
   apagarNota(indice) {
-    this.notas.push(indice, 1);
+    this.notas.splice(indice, 1);
     this.notificar();
   }
 
