@@ -8,6 +8,7 @@ function FormularioCadastro({aoEnviar, validarCPF}) {
     <>
       <DadosPessoais aoEviar={aoEviar} validarCPF={validarCPF} />
       <DadosUsuario />
+      {/* <DadosEntre */}
     </>
   );
 }
