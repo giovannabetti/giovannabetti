@@ -1,0 +1,7 @@
+db.artigos.find({ categorias: "Programação" })
+
+db.artigos.find({ categorias: "Programação" }).explain("executionStats")
+
+db.artigos.createIndex({ categorias: 1 });
+
+db.artigos.getIndexes();

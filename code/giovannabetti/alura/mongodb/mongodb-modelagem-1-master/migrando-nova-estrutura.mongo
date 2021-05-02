@@ -1,0 +1,26 @@
+
+db.autores.aggregate([
+    {
+        $unwind: "$artigos"
+    },
+    {
+        $project: {
+            _id: 0,
+            "autor.nome": "$nome",
+            "autor.descricao": "$descricao",
+            "autor.email": "$email",
+            "autor.senha": "$senha",
+            slug: "$artigos.slug",
+            titulo: "$artigos.titulo",
+            conteudo: "$artigos.conteudo",
+            dataCriado: "$artigos.dataCriado"
+        }
+    },
+    {
+        $out: "artigos"
+    }
+])
+
+db.autores.drop();
+
+db.getCollectionNames();

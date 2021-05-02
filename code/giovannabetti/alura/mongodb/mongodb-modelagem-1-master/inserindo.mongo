@@ -1,0 +1,6 @@
+db.infoAutores.insertOne({
+    nome: "Yan Orestes",
+    email: "yan@caelum.com.br",
+    senha: "yan1234",
+    descricao: "Instrutor e desenvolvedor na Alura"
+})
