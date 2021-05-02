@@ -1,0 +1,36 @@
+var produto1 = db.produtos.findOneAndUpdate({
+    modelo: "iPhone 8",
+    quantidade: {
+        $gt: 0
+    }
+    },{
+        $inc: {
+            quantidade: -1
+        }
+    },{
+            projection: {
+            marca: 1,
+            modelo: 1,
+            preco: 1
+        }
+})
+
+
+
+var produto2 = db.produtos.findOneAndUpdate({
+    modelo: "Moto G7",
+    quantidade: {
+        $gt: 0
+    }
+    },{
+        $inc: {
+            quantidade: -1
+        }
+    },{
+        projection: {
+            marca: 1,
+            modelo: 1,
+            preco: 1
+        }
+})
+
