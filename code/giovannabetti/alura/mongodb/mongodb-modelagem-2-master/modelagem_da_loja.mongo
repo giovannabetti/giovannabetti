@@ -1,0 +1,46 @@
+db.produtos.insertOne({
+    marca: "Apple",
+    modelo: "iPhone 11",
+    descricao: "O celular mais novo da Apple com duas",
+    sistema: "iOS 13",
+    memoria: "128GB",
+    chips: 1,
+    preco: NumberDecimal("4999.99"),
+})
+
+db.clientes.insertOne(
+    {
+        nome: "Giovanni",
+        endereco: "Rua Vergueiro, 3185",
+        email: "giovanni@example.com",
+        senha: "giovanni1234"
+    }
+)
+
+db.clientes.insertOne(
+    {
+        nome: "Ricardo",
+        endereco: "Rua do Ouvidor, 50",
+        email: "ricardo@example.com",
+        senha: "ricardo1234"
+    }
+)
+
+db.produtos.update({
+    modelo: "iPhone 11"
+}, {
+    $set: {
+        quantidade: 7
+    }
+})
+
+db.clientes.updateMany({},
+    {
+        $set: {
+            carrinho: {
+                produtos: []
+            }
+        }
+    }
+)
+

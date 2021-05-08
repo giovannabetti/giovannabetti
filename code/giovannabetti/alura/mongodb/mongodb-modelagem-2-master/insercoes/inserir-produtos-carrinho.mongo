@@ -34,3 +34,12 @@ var produto2 = db.produtos.findOneAndUpdate({
         }
 })
 
+db.clientes.update({
+    nome: "Ricardo"
+}, {
+    $push: {
+        "carrinho.produtos": {
+            $each: [produto1, produto2]
+        }
+    }
+})
