@@ -53,3 +53,58 @@ db.lojas.update({
         produtos: [iphone11._id, iphone8._id]
     }
 })
+
+var iphone11 = db.produtos.findOne({ modelo: "iPhone 11" });
+var iphone8 = db.produtos.findOne({ modelo: "iPhone 8" });
+
+db.lojas.update({
+    nome: "Apple Store",
+}, {
+    $set: {
+        produtos: [iphone11._id, iphone8._id]
+    }
+})
+
+db.lojas.aggregate([{
+    $match: {
+        nome: "Apple Store"
+    }
+},{
+    $lookup: {
+        from: "produtos",
+        localField: "produtos",
+        foreignField: "_id",
+        as: "listaProdutos"
+    }
+}]).pretty();
+
+var appleStore = db.lojas.findOne({
+    nome: "Apple Store"
+})
+
+db.produtos.aggregate([{
+    $match: {
+        modelo: "Moto G7"
+    }
+},{
+    $lookup: {
+        from: "lojas",
+        localField: "vendido_em",
+        foreignField: "_id",
+        as: "listaLojas"
+    }
+}]).pretty();
+
+db.lojas.updateMany({}, {
+    $unset: {
+        produtos:1
+    }
+})
+
+var appleStore = db.lojas.findOne({
+    nome: "Apple Store"
+})
+
+db.produtos.find({
+    vendido_em: appleStore._id
+})

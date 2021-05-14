@@ -5,3 +5,28 @@ db.lojas.insertMany([{
     nome: "Fast Shop",
     endereco: "Av. Zaki Narchi, 1664"
 }])
+
+db.lojas.insertOne({
+    nome: "Apple Store",
+    endereco: "Av. Roque Petroni Júnior, 1080"
+})
+
+var appleStore = db.lojas.findOne({
+    nome: "Apple Store"
+})
+
+var magazineLuiza = db.lojas.findOne({
+    nome: "Magazine Luiza"
+})
+
+var fastShop = db.lojas.findOne({
+    nome: "Fast Shop"
+})
+
+db.produtos.update({
+    modelo: "Moto G7"
+}, {
+    $set: {
+        vendido_em: [magazineLuiza._id, fastShop._id]
+    }
+})
