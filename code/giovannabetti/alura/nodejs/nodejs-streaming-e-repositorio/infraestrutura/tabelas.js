@@ -1,8 +1,9 @@
 class Tabelas {
     init(conexao) {
-        this.conexao = conexao
+        this.conexao = conexao;
 
-        this.criarAtendimentos()
+        this.criarAtendimentos();
+        this.criarPets();
     };
 
     criarAtendimentos() {
