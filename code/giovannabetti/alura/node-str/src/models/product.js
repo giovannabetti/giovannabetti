@@ -35,6 +35,11 @@ const schema = new Schema({
       required: true,
     },
   ],
+  image: {
+    type: String,
+    required: true,
+    trim: true,
+  },
 });
 
 module.exports = mongoose.model("Product", schema);

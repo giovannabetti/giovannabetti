@@ -4,6 +4,8 @@ const ValidationContract = require("../validators/fluent-validator");
 const repository = require("../repositories/customer-repository");
 const md5 = require("md5");
 
+const emailService = require('../services/email-service');
+
 exports.post = async (req, res, next) => {
   let contract = new ValidationContract();
   contract.hasMinLen(
@@ -34,6 +36,9 @@ exports.post = async (req, res, next) => {
       // Just md5 is enough and is difficulty to broke crypto, so add a server's key for more protection of data.
       password: md5(req.body.password + global.SALT_KEY),
     });
+
+    emailService.send(req.body.email, 'Bem vindo à Node Store', global.EMAIL_TMPL.replace('{0}', req.body.name));
+
     res.status(201).send({
       message: "Cliente cadastrado com sucesso!",
     });
