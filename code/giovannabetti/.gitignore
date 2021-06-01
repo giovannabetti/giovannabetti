@@ -1,0 +1,11 @@
+bin
+Gemfile
+Gemfile.lock
+coffee-app
+exercism
+geocodertest
+gitstery
+react-redux-challenges
+node_modules
+spec
+dotfiles

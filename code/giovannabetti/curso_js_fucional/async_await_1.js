@@ -1,0 +1,2 @@
+// quando voce marca uma funcao como assincrona, voce tem a capacidade de esperar dentro dela que um determinado promise seja resolvido sem usar o metodo then
+// por tras de uma async/await tem que ter um promise
