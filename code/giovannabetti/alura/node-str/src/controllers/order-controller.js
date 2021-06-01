@@ -16,6 +16,12 @@ exports.get = async (req, res, next) => {
 
 exports.post = async (req, res, next) => {
   try {
+    // Recover token
+    let token = req.body.token || req.query.token || req.headers['x-access-token'];
+
+    // Decode token
+    let data = await authService.decodeToken(token);
+    
     await repository.create({
       customer: req.body.customer,
       number: guid.raw().substring(0, 6),
