@@ -23,7 +23,6 @@ const schema = new Schema({
     enum: ['created', 'done'],
     default: 'created'
   },
-
   items: [{
     quantity: {
       type: Number,
