@@ -19,13 +19,37 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Pessoas.init({
-    nome: DataTypes.STRING,
+    nome: {
+      type: DataTypes.STRING,
+      validate: {
+        funcaoValidadora: function(dado) {
+          if (dado.length < 3) throw new Error('o campo deve ter mais de 3 caracteres')
+        }
+      }
+    },
     ativo: DataTypes.BOOLEAN,
-    email: DataTypes.STRING,
+    email: {
+      type: DataTypes.STRING,
+      validate: {
+        isEmail: {
+          args: true,
+          msg: 'Email inválido'
+        }
+      }
+    },
     role: DataTypes.STRING
   }, {
     sequelize,
     paranoid: true,
+    defaultScope: {
+      where: {
+        ativo: true
+      }
+    },
+    scopes: {
+      todos: { where: {} }
+      // etc: { constraint: value }
+    },
     modelName: 'Pessoas',
   })
   return Pessoas
