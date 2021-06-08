@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 const {
   Model
-} = require('sequelize');
+} = require('sequelize')
 module.exports = (sequelize, DataTypes) => {
   class Niveis extends Model {
     /**
@@ -14,12 +14,13 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'nivel_id'
       })
     }
-  };
+  }
   Niveis.init({
     descr_nivel: DataTypes.STRING
   }, {
     sequelize,
+    paranoid: true,
     modelName: 'Niveis',
-  });
-  return Niveis;
-};
+  })
+  return Niveis
+}
