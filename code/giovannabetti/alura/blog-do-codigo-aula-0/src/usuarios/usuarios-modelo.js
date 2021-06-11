@@ -34,26 +34,25 @@ class Usuario {
     validacoes.campoStringNaoNulo(this.email, 'email');
   }
 
-  
   async deleta() {
     return usuariosDao.deleta(this);
   }
-  
+
   static async buscaPorId(id) {
     const usuario = await usuariosDao.buscaPorId(id);
     if (!usuario) {
       return null;
     }
-    
+
     return new Usuario(usuario);
   }
-  
+
   static async buscaPorEmail(email) {
     const usuario = await usuariosDao.buscaPorEmail(email);
     if (!usuario) {
       return null;
     }
-    
+
     return new Usuario(usuario);
   }
 
