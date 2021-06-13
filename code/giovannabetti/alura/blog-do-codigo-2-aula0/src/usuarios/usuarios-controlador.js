@@ -4,6 +4,11 @@ const { InvalidArgumentError } = require('../erros');
 const tokens = require('./tokens');
 const { EmailVerificacao } = require('./emails');
 
+function geraEndereco(rota, id) {
+  const baseURL = process.env.BASE_URL;
+  return `${baseURL}${rota}${id}`;
+}
+
 module.exports = {
   async adiciona(req, res) {
     const { nome, email, senha } = req.body;
@@ -18,7 +23,8 @@ module.exports = {
 
       // emails.enviaEmail(usuario).catch(console.log);
 
-      const endereco = 'localhost:3000/usuario/verifica_email/' + usuario.id;
+      // const endereco = 'localhost:3000/usuario/verifica_email/' + usuario.id;
+      const endereco = geraEndereco('/usuario/verifica_email/', usuario.id);
       const emailVerificacao = new EmailVerificacao(usuario, endereco);
       emailVerificacao.enviaEmail().catch(console.log);
 
