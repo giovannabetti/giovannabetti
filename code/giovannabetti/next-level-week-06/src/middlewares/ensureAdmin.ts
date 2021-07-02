@@ -12,9 +12,7 @@ export async function ensureAdmin(
 
     const usersRepositories = getCustomRepository(UsersRepositories);
 
-    const user = await usersRepositories.findOne(user_id);
-
-    const admin = true;
+    const { admin } = await usersRepositories.findOne(user_id);
 
     if (admin) {
       return next();
