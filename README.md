@@ -3,7 +3,7 @@
 ## Hey, there 👋
 
 I'm a Padawan in this universe of Web Development 🌍.
-I am graduated in Marketing, nerd, research project analyst for almost 7 years and future digital nomad.
+I am graduated in Marketing, nerd, research project analyst for almost 7 years and an eternal curious who is always looking for new knowledge .
 
  :rocket:  &nbsp; I did a full-time web development code bootcamp at **Le Wagon** (july - september/2020)
  <br/> :green_heart: &nbsp; Currently, I'm a student of software development at **Trybe** (september/2020 - september/2021)
