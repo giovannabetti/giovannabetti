@@ -7,7 +7,7 @@ I am graduated in Marketing, nerd, research project analyst for almost 7 years a
 
  :rocket:  &nbsp; I did a full-time web development code bootcamp at **Le Wagon** (july - september/2020)
  <br/> :green_heart: &nbsp; Currently, I'm a student of software development at **Trybe** (september/2020 - september/2021)
- <br/> :computer: &nbsp; My stack: Ruby On Rails, ReactJS, SQL, NoSQL, Node.js & Typescript
+ <br/> :computer: &nbsp; My stack: Ruby On Rails, ReactJS, SQL, NoSQL, Node.js, Typescript & Python.
  <br/> 💬  &nbsp; In parallel, I'm student at **Alura** and my focus of studies is training in UX, UI, digital accessibility and business intelligence
  <br/> 📈️  &nbsp; In June/2021 I did Banco Carrefour Data Engineer bootcamp at **Digital Innovation One**
  <br/> ☁️  &nbsp; In July/2021 I began at Cognizant Cloud Data Engineer bootcamp at **Digital Innovation One**
