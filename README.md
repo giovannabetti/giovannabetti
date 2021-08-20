@@ -14,3 +14,5 @@ I am graduated in Marketing, nerd, research project analyst for almost 7 years a
  <br/> :email: &nbsp; Contact me: [![Linkedin Badge](https://img.shields.io/badge/-GiovannaBetti-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/giovannabetti/)](https://www.linkedin.com/in/giovannabetti/) 
 | 
 [![Gmail Badge](https://img.shields.io/badge/-giovannabetti@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:giovannabetti@gmail.com)](mailto:giovannabetti@gmail.com)
+
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=giovannabetti&show_icons=true&theme=react&hide=issues) [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=giovannabetti&layout=compact&theme=react)](https://github.com/anuraghazra/github-readme-stats)
